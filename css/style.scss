@@ -1,7 +1,22 @@
 @charset "UTF-8";
-
-.container-fluid
+body
 {
-  height: 100vh;
-  display:flex;
+  background-color: #eee;
+}
+.container
+{
+  background-color: #fff;
+  height:100vh;
+  box-sizing: border-box;
+}
+.main-heading
+{
+  padding: 5vh 0;
+}
+.input-group
+{
+  margin: 5vh 0;
+}
+.alert-box{
+  padding: 5vh 0;
 }
