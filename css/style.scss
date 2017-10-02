@@ -17,6 +17,11 @@ body
 {
   margin: 5vh 0;
 }
-.alert-box{
+.alert-box
+{
   padding: 5vh 0;
+}
+.received-password::selection
+{
+  background-color: rgba(0,0,0,0);
 }
