@@ -1,10 +1,17 @@
 let password = '';
 let receivedPassword = document.querySelector('#passwordReceiveBox');
 let alertBox = document.querySelector('#currentAlert');
+let lowercaseLetters = document.querySelector('#lowercaseLetters');
 let uppercaseLetters = document.querySelector('#uppercaseLetters');
 let numbers = document.querySelector('#numbers');
 let specialCharacters = document.querySelector('#specialCharacters');
 function generatePassword() {
+  if(!(lowercaseLetters.checked) && !(uppercaseLetters.checked)&& !(numbers.checked)&&!(specialCharacters.checked)) {
+    alertBox.classList.remove('text-success');
+    alertBox.classList.add('text-danger');
+    alertBox.innerHTML = "Please check at least one checkbox!";
+    return;
+  }
   password = '';
   let passwordLength = document.querySelector('#passwordLength').value;
   if(passwordLength < 8) {
@@ -23,6 +30,10 @@ function generatePassword() {
     alertBox.innerHTML = "Here's your password! Click on the input to copy your password to your clipboard";
     for(let i=0; i<passwordLength; i++) {
         let character = 33 + Math.floor(Math.random()*92);
+        if(!(lowercaseLetters.checked)&&(character > 96 && character < 123)) {
+          passwordLength++;
+          continue;
+        }
         if(!(uppercaseLetters.checked)&&(character > 64 && character < 91)) {
           passwordLength++;
           continue;
