@@ -6,20 +6,20 @@ body
 .container
 {
   background-color: #fff;
-  height:100vh;
+  min-height:100vh;
   box-sizing: border-box;
 }
 .main-heading
 {
-  padding: 5vh 0;
+  padding: 4vh 0;
 }
 .input-group
 {
-  margin: 5vh 0;
+  margin: 4vh 0;
 }
 .alert-box
 {
-  padding: 5vh 0;
+  padding: 4vh 0;
 }
 .received-password::selection
 {
@@ -42,5 +42,17 @@ footer
   footer
   {
     display: none;
+  }
+  .alert-box
+  {
+    padding: 0;
+  }
+
+}
+@media(max-height: 800px)
+{
+  .input-group
+  {
+    margin: 1vh 0;
   }
 }

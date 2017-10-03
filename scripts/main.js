@@ -14,6 +14,12 @@ function generatePassword() {
   }
   password = '';
   let passwordLength = document.querySelector('#passwordLength').value;
+  if(isNaN(passwordLength)) {
+    alertBox.classList.remove('text-success');
+    alertBox.classList.add('text-danger');
+    alertBox.innerHTML = "Enter the password length!";
+    return;
+  }
   if(passwordLength < 8) {
     alertBox.classList.remove('text-success');
     alertBox.classList.add('text-danger');
