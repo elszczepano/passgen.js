@@ -1,10 +1,11 @@
 let password = '';
-let receivedPassword = document.querySelector('#passwordReceiveBox');
-let alertBox = document.querySelector('#currentAlert');
-let lowercaseLetters = document.querySelector('#lowercaseLetters');
-let uppercaseLetters = document.querySelector('#uppercaseLetters');
-let numbers = document.querySelector('#numbers');
-let specialCharacters = document.querySelector('#specialCharacters');
+const receivedPassword = document.querySelector('#passwordReceiveBox');
+const alertBox = document.querySelector('#currentAlert');
+const lowercaseLetters = document.querySelector('#lowercaseLetters');
+const uppercaseLetters = document.querySelector('#uppercaseLetters');
+const numbers = document.querySelector('#numbers');
+const specialCharacters = document.querySelector('#specialCharacters');
+const generateButton = document.querySelector('#generatePassword');
 function generatePassword() {
   if(!(lowercaseLetters.checked) && !(uppercaseLetters.checked)&& !(numbers.checked)&&!(specialCharacters.checked)) {
     alertBox.classList.remove('text-success');
@@ -67,6 +68,5 @@ function copyToClipboard() {
     alertBox.innerHTML = "Copied!";
   }
 }
-const generateButton = document.querySelector('#generatePassword');
 generateButton.addEventListener('click',generatePassword);
 receivedPassword.addEventListener('click',copyToClipboard);
