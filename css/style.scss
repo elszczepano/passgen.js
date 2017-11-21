@@ -1,58 +1,46 @@
 @charset "UTF-8";
-body
-{
+body {
   background-color: #eee;
 }
-.container
-{
+.container {
   background-color: #fff;
   min-height:100vh;
   box-sizing: border-box;
 }
-.main-heading
-{
+.main-heading {
   padding: 4vh 0;
 }
-.input-group
-{
+.input-group {
   margin: 4vh 0;
 }
-.alert-box
-{
+.alert-box {
   padding: 4vh 0;
 }
-.received-password::selection
-{
+.received-password::selection {
   background-color: rgba(0,0,0,0);
 }
-footer
-{
+.form-check-label {
+  user-select: none;
+}
+footer {
   font-size: 0.9rem;
 }
-@media(max-width: 768px)
-{
-  .main-box
-  {
+@media(max-width: 768px) {
+  .main-box {
     display: block !important;
     text-align: center;
   }
 }
-@media(max-height: 500px)
-{
-  footer
-  {
+@media(max-height: 500px) {
+  footer {
     display: none;
   }
-  .alert-box
-  {
+  .alert-box {
     padding: 0;
   }
-
 }
-@media(max-height: 800px)
-{
-  .input-group
-  {
+@media(max-height: 800px) {
+  .input-group {
     margin: 1vh 0;
   }
 }
